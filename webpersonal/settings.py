@@ -25,7 +25,7 @@ SECRET_KEY = 'yg2$g)@elop@)7^)nokp_3cmm$9le_p%73n_tq#wrb!xcgw3(p'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['jaimeardp.pythonanywhere.com','localhost','127.0.0.1']
 
 
 # Application definition
@@ -127,15 +127,15 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 # Subir proyecto a heroku
 
-import dj_database_url  
-db_from_env = dj_database_url.config(conn_max_age=500)  
-DATABASES['default'].update(db_from_env)  
+import dj_database_url
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 
 # Extra places for collectstatic to find static files.
-STATICFILES_DIRS = (  
+STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
